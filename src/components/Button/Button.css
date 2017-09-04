@@ -1,0 +1,91 @@
+
+
+.button{
+  border-radius: 0.2rem;
+  padding: 0 0.4375rem;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.875rem;
+  height: 1.6125rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+
+}
+.button-disabled{
+  opacity: 0.5;
+  cursor:default;
+}
+
+.button:not(.button-emphasized):not(.button-disabled):not(:active):hover{
+  background-color: #ebebeb;
+}
+
+.button-default {
+  color: #346187;
+  background-color: #f7f7f7;
+  border-color:#ababab;
+}
+.button-default:not(.button-disabled):active{
+  color: white;
+  background-color: #427cac;
+  border-color: #427cac;
+  outline-offset: -0.2rem;
+  outline: 1px dotted white;
+}
+
+.button-accept {
+  color: #2b7d2b;
+  background-color: #f7f7f7;
+  border-color: #2b7d2b;
+}
+.button-accept:not(.button-disabled):active{
+  color: white;
+  background-color: #2b7d2b;
+  border-color: #2b7d2b;
+  outline-offset: -0.2rem;
+  outline: 1px dotted white;
+}
+
+
+.button-reject {
+  color: #bb0000;
+  background-color: #f7f7f7;
+  border-color: #bb0000;
+}
+.button-reject:not(.button-disabled):active{
+  color: white;
+  background-color: #bb0000;
+  border-color: #bb0000;
+  outline-offset: -0.2rem;
+  outline: 1px dotted white;
+}
+.button:not(.button-disabled):not(:active):focus{
+  outline-offset: -0.2rem;
+  outline: 1px dotted black;
+}
+
+.button-emphasized {
+  color: white;
+  background-color: #418ac7;
+  border-color: #418ac7;
+}
+.button-emphasized:not(.button-disabled):active{
+  color: black;
+  background-color: #91c8f6;
+  border-color: #91c8f6;
+  outline-offset: -0.2rem;
+  outline: 1px dotted black;
+}
+
+.button-transparent {
+  color: #346187;
+  background-color: transparent;
+  border-width: 0;
+}
+.button-transparent:not(.button-disabled):active{
+  color: white;
+  background-color: #427cac;
+  border-color: #427cac;
+  outline-offset: -0.2rem;
+  outline: 1px dotted white;
+}

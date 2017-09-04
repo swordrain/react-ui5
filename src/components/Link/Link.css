@@ -1,0 +1,28 @@
+
+.link {
+  color: #0070b1;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    font-family: Arial,Helvetica,sans-serif;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+.link:not(.link-disabled):hover{
+  text-decoration: underline;
+}
+.link:not(.link-disabled):focus{
+  outline: 1px dotted black;
+  text-decoration: underline;
+}
+
+.link-disabled{
+ opacity: 0.5;
+ cursor: default;
+}
+.link-emphasized{
+ font-weight: bold;
+}

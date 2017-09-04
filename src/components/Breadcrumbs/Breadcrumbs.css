@@ -1,0 +1,17 @@
+.breadcrumbs-ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0 0 0.5rem 0;
+}
+
+.breadcrumbs-li {
+  display: flex;
+  align-items: center;
+
+}
+
+.breadcrumbs-seperation {
+  margin: 0 0.25rem;
+  color: #666666;
+  font-size: 0.9rem;
+}

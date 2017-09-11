@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import IconTypes from './IconTypes'
 import './Icon.css'
-const Icon = ({src, color, size="1rem"}) => {
+const Icon = ({src, color, size="0.875rem"}) => {
   //const icon = (IconTypes[src]).toString(16)
   const icon = IconTypes[src]
   return (

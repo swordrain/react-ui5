@@ -1,0 +1,35 @@
+  .token {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding-left: 0.25rem;
+  border: 1px solid #dedede;
+  height: 1.25rem;
+  line-height: 1.15rem;
+  border-radius: 0.125rem;
+  color: #346187;
+  background: #f7f7f7;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: calc(100% - 1.25rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.cancel{
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.token:hover {
+  background: #ebebeb;
+  cursor: default;
+}
+
+.token:active {
+  outline: 1px dotted white;
+  outline-offset: -3px;
+  color: white;
+  background-color: #427cac;
+  border-color: #427cac;
+}

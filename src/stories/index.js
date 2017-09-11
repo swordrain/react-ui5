@@ -12,6 +12,8 @@ import Link from '../components/Link/Link'
 import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs'
 import Text from '../components/Text/Text'
 import BusyIndicator from '../components/BusyIndicator/BusyIndicator'
+import Token from '../components/Token/Token'
+import SearchField from '../components/SearchField/SearchField'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -52,20 +54,39 @@ storiesOf('Button', module)
       </div>
     ))
 
-    storiesOf('Breadcrumbs', module)
-      .add('Breadcrumbs', ()=> (
-        <Breadcrumbs currentLocationText="currentLocation">
-          <Link onPress={()=>{alert('clicked')}} text="Path1" />
-          <Link onPress={()=>{alert('clicked')}} text="Path2" />
-          <Link onPress={()=>{alert('clicked')}} text="Path3" />
-          <Link onPress={()=>{alert('clicked')}} text="Path4" />
-        </Breadcrumbs>
+storiesOf('Breadcrumbs', module)
+  .add('Breadcrumbs', ()=> (
+    <Breadcrumbs currentLocationText="currentLocation">
+      <Link onPress={()=>{alert('clicked')}} text="Path1" />
+      <Link onPress={()=>{alert('clicked')}} text="Path2" />
+      <Link onPress={()=>{alert('clicked')}} text="Path3" />
+      <Link onPress={()=>{alert('clicked')}} text="Path4" />
+    </Breadcrumbs>
 
-      ))
+  ))
 
-      storiesOf('Text', module)
-        .add('Text', ()=> (
-          <Text text="Hello World" />))
-      storiesOf('BusyIndicator', module)
-        .add('BusyIndicator', ()=> (
-          <BusyIndicator />))
+  storiesOf('Text', module)
+    .add('Text', ()=> (
+      <Text text="Hello World" />))
+  storiesOf('BusyIndicator', module)
+    .add('BusyIndicator', ()=> (
+      <BusyIndicator />))
+
+storiesOf('Token', module)
+  .add('Token', ()=> (
+    <div>
+    <Token title="Hello World" onCancel={()=>{alert("Delete")}}/>
+    <Token title="Foo" onCancel={()=>{alert("Delete")}}/>
+    <Token title="Bar" onCancel={()=>{alert("Delete")}}/>
+    </div>
+  ))
+
+  storiesOf('SearchField', module)
+  .add('SearchField', ()=> (
+    <div>
+    <SearchField value="Hello" placeholder="Search..." onSearch={(keyword) => {alert(`Search ${keyword}`)}}/>
+    <SearchField placeholder="Search..." />
+    <SearchField placeholder="Search..." width="200px" />
+    <SearchField placeholder="Search..." enable={false} />
+    </div>
+  ))

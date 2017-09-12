@@ -27,6 +27,7 @@ export default class SegmentedButtonGroup extends Component{
         this.props.children.map((item, index) => {
           const isFirst = index === 0
           const isLast = index === this.props.children.length - 1
+          console.log(item.props)
           const props = Object.assign({}, item.props)
           props.onChange = this._onChange
           props.name = name

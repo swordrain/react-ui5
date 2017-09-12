@@ -62,8 +62,8 @@ storiesOf('Button', module)
       </SegmentedButtonGroup>
       <hr />
       <SegmentedButtonGroup name="icon" value='foo' onChange={action('change')}>
-        <SegmentedButton value='foo'>Icon-Foo</SegmentedButton>
-        <SegmentedButton value='bar'>Icon-Bar</SegmentedButton>
+        <SegmentedButton value='foo' icon="home">Icon-Foo</SegmentedButton>
+        <SegmentedButton value='bar' icon="phone">Icon-Bar</SegmentedButton>
       </SegmentedButtonGroup>
       <hr />
       <SegmentedButtonGroup name="disabled" value='foo' onChange={action('change')}>
@@ -114,9 +114,9 @@ storiesOf('Breadcrumbs', module)
 storiesOf('Token', module)
   .add('Token', ()=> (
     <div>
-    <Token title="Hello World" onCancel={action('delete')}/>
-    <Token title="Foo" onCancel={()=>{alert("Delete")}}/>
-    <Token title="Bar" onCancel={()=>{alert("Delete")}}/>
+    <Token title="Hello World" onCancel={action('Delete')}/>
+    <Token title="Foo" onCancel={()=>{action("Delete")}}/>
+    <Token title="Bar" onCancel={()=>{action("Delete")}}/>
     </div>
   ))
 

@@ -8,6 +8,7 @@
   text-shadow: none;
   color: #346187;
   border: 1px solid #bfbfbf;
+  border-right-width: 0;
   cursor: pointer;
   height: 1.625rem;
   line-height: 1.5rem;
@@ -35,8 +36,12 @@
 .segmented-button-container-last{
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
+  border-right-width: 1px;
 }
 
 .segmented-button-container input{
   display: none;
+}
+.segmented-button-icon-container{
+  margin-right: 0.4375rem;
 }

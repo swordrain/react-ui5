@@ -55,7 +55,7 @@ export default class SearchField extends Component{
     const clearBtn = this.state.value.length > 0? <Button type="transparent" icon="sys-cancel" onPress={this._onClear} /> : null
     const searchBtn = this.state.value.length > 0? <Button ref="srhBtn" type="transparent" icon="search" onPress={this._onSearch} /> : null
     return (
-      <div style={{width}} className="container" onKeyDown={this._onKeyDown} onKeyUp={this._onKeyUp}>
+      <div style={{width}} className="search-field-container" onKeyDown={this._onKeyDown} onKeyUp={this._onKeyUp}>
       <input className="searchField"  onChange={this._onChange} disabled={!enable} value={this.state.value} placeholder={placeholder} />
       {clearBtn}
       {searchBtn}

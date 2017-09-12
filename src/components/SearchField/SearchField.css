@@ -13,7 +13,7 @@
   flex: 1;
 }
 
-.container:hover{
+.search-field-container:hover{
   border-color: #427cac;
 }
 .searchField:focus {
@@ -21,7 +21,7 @@
   outline-offset: -3px;
 }
 
-.container{
+.search-field-container{
   display: flex;
   border: 1px solid #bfbfbf;
   background: #ffffff;

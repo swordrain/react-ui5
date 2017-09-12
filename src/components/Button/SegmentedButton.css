@@ -1,0 +1,42 @@
+.segmented-button-container {
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  text-shadow: none;
+  color: #346187;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+  height: 1.625rem;
+  line-height: 1.5rem;
+  padding-left: 0.4375rem;
+  padding-right: 0.4375rem;
+  background-color: white;
+  flex: 1;
+}
+
+.segmented-button-container-disabled {
+  opacity: 0.5;
+}
+.segmented-button-container-active {
+  background-color: #346187;
+  color: white;
+}
+
+.segmented-button-container label:hover {
+  cursor: pointer;
+}
+.segmented-button-container-first{
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+.segmented-button-container-last{
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.segmented-button-container input{
+  display: none;
+}

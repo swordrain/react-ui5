@@ -1,0 +1,68 @@
+.radio-button-container {
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666666;
+  display: flex;
+  align-items: center;
+}
+
+.radio-button-container-disabled {
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #666666;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.radio-button-container:hover {
+  cursor: pointer;
+}
+.radio-button-indicator-checked{
+  border: 0.125rem solid #bfbfbf;
+  border-radius: 50%;
+  height: 0.35rem;
+  width: 0.35rem;
+  padding: 0.2rem;
+  background-color: #427cac;
+  background-origin: content-box;
+  background-clip:content-box;
+  margin: 0.15rem;
+  display: inline-block;
+}
+.radio-button-container .radio-button-indicator-checked:hover{
+  border-color: #427cac;
+}
+.radio-button-indicator-unchecked{
+  border: 0.125rem solid #bfbfbf;
+  border-radius: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  margin: 0.15rem;
+  display: inline-block;
+}
+.radio-button-container .radio-button-indicator-unchecked:hover{
+  border-color: #427cac;
+}
+/*.radio-button-container input::before {
+  content: '';
+  border: 0.125rem solid #bfbfbf;
+  border-radius: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  margin: 0.15rem;
+  display: inline-block;
+}*/
+
+.radio-button-container-disabled {
+  opacity: 0.5;
+}
+
+.radio-button-container input,  .radio-button-container-disabled input{
+  display: none;
+}

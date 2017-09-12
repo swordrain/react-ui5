@@ -14,6 +14,10 @@ import Text from '../components/Text/Text'
 import BusyIndicator from '../components/BusyIndicator/BusyIndicator'
 import Token from '../components/Token/Token'
 import SearchField from '../components/SearchField/SearchField'
+import RadioButton from '../components/Button/RadioButton'
+import RadioButtonGroup from '../components/Button/RadioButtonGroup'
+import SegmentedButtonGroup from '../components/Button/SegmentedButtonGroup'
+import SegmentedButton from '../components/Button/SegmentedButton'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -27,12 +31,47 @@ storiesOf('Button', module)
     <Button type="reject" text="Reject" />
     <Button type="emphasized" text="Emphasized" />
     <Button type="transparent" text="Transparent" />
-    <Button type="default" text="Event" onPress={()=>{ alert("Foo Bar")}} />
+    <Button type="default" text="Event" onPress={action('clicked')} />
     <Button type="accept" enabled={false} text="Disabled" />
     <Button type="reject" text="Reject with icon" icon="home"/>
     <Button type="accept" text="Accept with icon" icon="call" iconFirst={false}/>
     <Button type="transparent" icon="badge" />
   </div>))
+  .add('RadioButton', ()=> (
+    <div>
+      <RadioButtonGroup name="foo" value='bar' onChange={action('change')}>
+        <RadioButton value='foo'>Foo-Foo</RadioButton>
+        <RadioButton value='bar'>Foo-Bar</RadioButton>
+      </RadioButtonGroup>
+      <hr />
+      <RadioButtonGroup name="bar" value='foo' onChange={action('change')}>
+        <RadioButton value='foo'>Bar-Foo</RadioButton>
+        <RadioButton value='bar'>Bar-Bar</RadioButton>
+      </RadioButtonGroup>
+      <hr />
+      <RadioButton name='disabled' enable={false} value='disabled' onChange={()=>{}}>Disabled</RadioButton>
+    </div>
+  ))
+  .add('SegmentedButton', ()=> (
+    <div>
+      <SegmentedButtonGroup width="400px" name="text" value='bar' onChange={action('change')}>
+        <SegmentedButton value='foo'>Foo-Foo</SegmentedButton>
+        <SegmentedButton value='bar'>Foo-Bar</SegmentedButton>
+        <SegmentedButton value='hello'>Foo-Hello</SegmentedButton>
+        <SegmentedButton value='world'>Foo-World</SegmentedButton>
+      </SegmentedButtonGroup>
+      <hr />
+      <SegmentedButtonGroup name="icon" value='foo' onChange={action('change')}>
+        <SegmentedButton value='foo'>Icon-Foo</SegmentedButton>
+        <SegmentedButton value='bar'>Icon-Bar</SegmentedButton>
+      </SegmentedButtonGroup>
+      <hr />
+      <SegmentedButtonGroup name="disabled" value='foo' onChange={action('change')}>
+        <SegmentedButton value='foo'>Enabled</SegmentedButton>
+        <SegmentedButton name='disabled' enable={false}>Disabled</SegmentedButton>
+      </SegmentedButtonGroup>
+    </div>
+  ))
 
   storiesOf('Icon', module)
     .add('Icon', ()=> (<div>
@@ -46,7 +85,7 @@ storiesOf('Button', module)
       <Link href="http://www.google.com" text="Go to Google" />
       </div>
       <div>
-      <Link text="Event & Emphasized" emphasized={true} onPress={()=>{alert('clicked')}} />
+      <Link text="Event & Emphasized" emphasized={true} onPress={action('clicked')} />
       </div>
       <div>
       <Link enabled={false} text="Disabled Link" />
@@ -75,7 +114,7 @@ storiesOf('Breadcrumbs', module)
 storiesOf('Token', module)
   .add('Token', ()=> (
     <div>
-    <Token title="Hello World" onCancel={()=>{alert("Delete")}}/>
+    <Token title="Hello World" onCancel={action('delete')}/>
     <Token title="Foo" onCancel={()=>{alert("Delete")}}/>
     <Token title="Bar" onCancel={()=>{alert("Delete")}}/>
     </div>
@@ -84,8 +123,9 @@ storiesOf('Token', module)
   storiesOf('SearchField', module)
   .add('SearchField', ()=> (
     <div>
-    <SearchField value="Hello" placeholder="Search..." onSearch={(keyword) => {alert(`Search ${keyword}`)}}/>
+    <SearchField value="Hello" placeholder="Search..." onSearch={(keyword) => {action(`Search ${keyword}`)()}}/>
     <SearchField placeholder="Search..." />
+
     <SearchField placeholder="Search..." width="200px" />
     <SearchField placeholder="Search..." enable={false} />
     </div>

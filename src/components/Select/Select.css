@@ -1,0 +1,57 @@
+.select-container {
+  display: inline-block;
+  position: relative;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  margin-top: 0.1875rem;
+  margin-bottom: 0.1875rem;
+  cursor: pointer;
+  outline: none;
+  margin: 0.25rem 0 0.25rem 0;
+  border: 1px solid #bfbfbf;
+  background: #ffffff;
+  font-size: 0.875rem;
+  padding: 0 1rem 0 1rem;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.select-container:hover {
+  border-color: #427cac;
+}
+.select-container:hover .select-items{
+  border-color: #427cac;
+}
+
+.select-items{
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: -1px;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.select-items ul{
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+.select-items ul li{
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 1rem 0 1rem;
+}
+.select-items ul li:hover{
+  background: #f0f0f0;
+}
+.select-indicator{
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}

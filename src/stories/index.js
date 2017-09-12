@@ -18,6 +18,7 @@ import RadioButton from '../components/Button/RadioButton'
 import RadioButtonGroup from '../components/Button/RadioButtonGroup'
 import SegmentedButtonGroup from '../components/Button/SegmentedButtonGroup'
 import SegmentedButton from '../components/Button/SegmentedButton'
+import Select from '../components/Select/Select'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -130,3 +131,24 @@ storiesOf('Token', module)
     <SearchField placeholder="Search..." enable={false} />
     </div>
   ))
+
+  const items = {
+    foo: 'Foo',
+    bar: 'Bar',
+    hello: 'Hello',
+    world: 'World',
+    foo1: 'Foo',
+    bar1: 'Bar',
+    hello1: 'Hello',
+    world1: 'World',
+    foo2: 'Foo',
+    bar2: 'Bar',
+    hello2: 'Hello',
+    world2: 'World',
+  }
+  storiesOf('Select', module)
+    .add('Select', ()=> (
+      <div>
+        <Select width="200px" items={items} value='world' onChange={(value) => {action(`change to ${value}`)()}}/>
+      </div>
+    ))

@@ -19,6 +19,7 @@ import RadioButtonGroup from '../components/Button/RadioButtonGroup'
 import SegmentedButtonGroup from '../components/Button/SegmentedButtonGroup'
 import SegmentedButton from '../components/Button/SegmentedButton'
 import Select from '../components/Select/Select'
+import StepInput from '../components/Input/StepInput'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -152,3 +153,19 @@ storiesOf('Token', module)
         <Select width="200px" items={items} value='world' onChange={(value) => {action(`change to ${value}`)()}}/>
       </div>
     ))
+
+    storiesOf('Input', module)
+      .add('StepInput', ()=> (
+        <div>
+          <StepInput defaultValue={5} />
+          <hr />
+          <StepInput width='80%' step={2} min={-5} max={10} onChange={(value) => {action(`change to ${value}`)()}}/>
+          <hr />
+          <StepInput displayValuePrecision={2} defaultValue={5} step={1.3} min={-5} max={10} onChange={(value) => {action(`change to ${value}`)()}}/>
+          <hr />
+          <StepInput defaultValue={5} enabled={false}/>
+          <hr />
+          <StepInput editable={true} step={1.3} displayValuePrecision={2} min={-5} max={10} onChange={(value) => {action(`change to ${value}`)()}}/>
+        </div>
+
+      ))

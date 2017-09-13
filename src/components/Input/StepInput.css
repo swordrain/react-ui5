@@ -1,0 +1,42 @@
+.step-input-container {
+  display: flex;
+  height: 1.625rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  border: 1px solid #bfbfbf;
+}
+.step-input-container-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.step-input-container-error{
+  border-color: red;
+}
+.step-input-operation {
+  height: 1.625rem;
+  width: 1.625rem;
+  line-height: 1.625rem;
+  font-size: 0.875rem;
+  color: #346187;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+.step-input-operation-error{
+  opacity: 0.5;
+  pointer-events: none;
+}
+.step-input-operation:hover{
+  background-color: rgba(179,179,179,0.5);
+}
+.step-input-input{
+  flex: 1;
+  outline: none;
+  border: none;
+  text-align: right;
+  min-width: 30px;
+}
+
+.step-input-input-uneditable{
+
+}

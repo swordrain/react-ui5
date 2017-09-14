@@ -20,6 +20,7 @@ import SegmentedButtonGroup from '../components/Button/SegmentedButtonGroup'
 import SegmentedButton from '../components/Button/SegmentedButton'
 import Select from '../components/Select/Select'
 import StepInput from '../components/Input/StepInput'
+import StandardTile from '../components/Tile/StandardTile'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -169,3 +170,18 @@ storiesOf('Token', module)
         </div>
 
       ))
+
+      storiesOf('Tile', module)
+        .add('StandardTile', ()=> (
+          <div>
+            <StandardTile onPress={action(`clicked`)} icon="hint" type="monitor" title="Tiles: a modern UI design pattern for overview & navigation."/>
+            <hr />
+            <StandardTile icon="inbox" type="default" number={89} title="Approve Leave Requests" info="Overdue" infoState="error"/>
+            <hr />
+            <StandardTile icon="add" type="default" title="Create Leave Requests" info="28 Days Left" infoState="success" />
+            <hr />
+            <StandardTile icon="travel-expense-report" title="Travel Reimbursement" info="1 day ago" number={281} numberUnit="euro" />
+            <hr />
+            <StandardTile icon="pie-chart" title="Financial Reports" info="4 day ago" infoState="warning" number={5} />
+          </div>
+        ))

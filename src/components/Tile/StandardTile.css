@@ -1,0 +1,129 @@
+.standard-tile-container {
+  overflow: hidden;
+  width: 12rem;
+  height: 14rem;
+  -webkit-user-drag: none;
+  margin: 0.5rem;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 0.125rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.standard-tile-container-active{
+  color: white;
+  background-color: #427cac;
+  outline: 1px dotted black;
+}
+
+.standard-tile-top-row {
+  height: 4rem;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+  color: #427cac;
+}
+
+.standard-tile-bottom-row {
+  margin-top: -2rem;
+  height: 7rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.standard-tile-bottom-row-active{
+  background-color: #427cac;
+}
+
+.standard-tile-default, .standard-tile-create {}
+
+.standard-tile-monitor {
+  background-color: #f2f2f2;
+}
+
+.standard-tile-title {
+  color: #333333;
+  line-height: 1.4rem;
+  vertical-align: top;
+  text-align: left;
+  font-size: 1rem;
+  height: 4rem;
+  width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+}
+.standard-tile-title-active{
+  color: white;
+}
+
+.standard-tile-top-row-icon-wrapper {
+  float: left;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+.standard-tile-top-row-icon-wrapper-active{
+  color: white;
+}
+
+.standard-tile-top-row-number-wrapper {
+  display: inline-block;
+float: right;
+width: 7.5rem;
+height: 4rem;
+}
+
+.standard-tile-top-row-number {
+  font-size: 3rem;
+    margin-top: -0.437rem;
+    color: #666666;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Arial Narrow',HelveticaNeue-CondensedBold,Arial,sans-serif;
+}
+
+.standard-tile-top-row-number-active{
+  color: white;
+}
+
+.standard-title-top-row-number-unit{
+  color: #666666;
+  white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-align: right;
+text-transform: uppercase;
+font-size: 0.875rem;
+}
+.standard-title-top-row-number-unit-active{
+  color: white;
+}
+.standard-tile-info{
+  white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-align: right;
+font-size: 0.875rem;
+margin-top: 2rem;
+}
+
+.standard-tile-info-active{
+  color: white;
+}
+
+.standard-tile-info-default{
+  color: #666666;
+}
+.standard-tile-info-success{
+  color: #2b7d2b;
+}
+.standard-tile-info-error{
+  color: #bb0000;
+}
+.standard-tile-info-warning{
+color: #e78c07;
+}
